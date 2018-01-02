@@ -1,0 +1,562 @@
+@charset "utf-8";
+/*
+==============================================================================
+Main
+==============================================================================
+*/
+
+html{
+    height: 100%;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0 auto;
+    position: relative;
+    min-height: 100%;
+    padding: 0;
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-size: 14px;
+    text-align: justify;
+    width: 100%;
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    margin:0.3em 0 0.5em;
+}
+
+h1 {font-size: 32px;}
+h2 {font-size: 26px;}
+h3 {font-size: 24px;}
+h4 {font-size: 22px;}
+h5 {font-size: 20px;}
+h6 {font-size: 18px;}
+
+img {
+    vertical-align: bottom;
+}
+
+
+ a:link, a:visited {
+    text-decoration: none !important;
+}
+
+ a:hover{
+    text-decoration: none !important;
+}
+
+a:active{
+    text-decoration: none !important;
+}
+#wrapper {
+    margin-bottom: 10em;
+}
+
+/*
+==============================================================================
+Header
+==============================================================================
+*/
+
+.header{
+    width: 100%;
+    padding: 1em;
+    content: "";
+    background:black; /* For browsers that do not support gradients */
+    background-image: url("img/escheresque.png");
+    box-shadow: 3px 3px 3px silver;
+}
+
+
+/*
+==============================================================================
+Navigation
+==============================================================================
+*/
+.nav a {
+    color: white;
+}
+
+#navbarNav {
+    border: none !important;
+    background-color: transparent;
+}
+
+#navbarNav ul {
+    margin-left: 2em;
+}
+.navbar-brand {
+    margin-left: 0 !important;
+}
+
+#menu-primary{
+    border: none !important;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+}
+
+
+.nav-item a:link, .nav-item a:visited {
+    display: block;
+    color: grey !important;
+}
+
+.nav-item a:hover {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.nav-item a:active {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+
+.dropdown-toggle:link, .dropdown-toggle:visited {
+    display: block;
+    color: grey !important;
+}
+
+.dropdown-toggle:hover {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+.dropdown-toggle:active {
+    color: black !important;
+    text-decoration: none !important;
+}
+
+
+#menu-primary > .active a {
+    color: darkgoldenrod !important;
+    border-bottom: 1px solid darkgoldenrod;
+    background-color: transparent !important;
+    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.5s; /* Firefox < 16 */
+    -o-animation: fadein 0.5s; /* Opera < 12.1 */
+    animation: fadein 0.5s;
+}
+
+.dropdown-menu .active a {
+    background-color: white !important;
+    color: darkgoldenrod !important;
+    -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 0.5s; /* Firefox < 16 */
+    -o-animation: fadein 0.5s; /* Opera < 12.1 */
+    animation: fadein 0.5s;
+}
+
+.navigation-z {
+    position: fixed;
+    margin-top: 5em;
+    list-style-type: none;
+    font-size: 18px;
+    z-index: 999;
+    margin-left: -7em;
+}
+.navigation-z li {
+    margin-bottom: 0.5em;
+    border-bottom: 1px solid silver;
+}
+
+/*
+==============================================================================
+Header search
+==============================================================================
+*/
+
+
+.search-form-continer {
+    display: none;
+    margin-top: 1em;
+}
+
+.open-search a {
+     font-size: 0;
+     width: 5em;
+     position:relative;
+ }
+
+.open-search a:after {
+    display: block;
+    position:absolute;
+    top: 10%;
+    left:0;
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    content: "\e003";
+    font-size: 18px;
+    line-height: 1em;
+    margin-top: 0.5em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+
+
+/*
+==============================================================================
+Footer
+==============================================================================
+*/
+
+#footer {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width:100%;
+    margin-top: 10em;
+    height: 20%;
+    padding: 2em;
+    box-shadow: 3px 3px 3px silver;
+    background-color:black; /* For browsers that do not support gradients */
+    background-image: url("img/escheresque.png");
+}
+
+#menu-secondary {
+    list-style-type: none;
+}
+#menu-secondary li {
+    margin: 0.5em;
+    font-family: 'Abel', sans-serif;
+    font-size: 18px;
+}
+#menu-secondary li a:link, #menu-secondary a:visited {
+    padding: 0.5em;
+    color: #cdaa54 !important;
+    border: 1px solid transparent;
+    border-radius: 0.3em;
+}
+
+#menu-secondary li a:hover{
+    color: #dbc285 !important;
+    text-decoration: none;
+}
+
+#menu-secondary li a:active {
+    color: #dbc285 !important;
+    text-decoration: none;
+}
+
+.fa-a:link, .fa-a:visited {
+    margin-left: 0.4em;
+    color: #cdaa54 !important;
+}
+
+.fa-a:hover {
+    color: #dbc285 !important;
+}
+
+
+/*
+==============================================================================
+Pages
+==============================================================================
+*/
+
+.home .entry-header {
+    display: none;
+}
+
+.entry-title a:link, a:visited {
+    color: white !important;
+    text-decoration: none;
+}
+.entry-title a:hover{
+    color: silver !important;
+    text-decoration: none;
+}
+.entry-title a:active {
+    color: white !important;
+}
+/*
+==============================================================================
+Carousel
+==============================================================================
+*/
+#carousel {
+    background-color: #ecf0f1;
+}
+
+#carousel .item {
+    overflow: hidden;
+    height: 30em;
+}
+#carousel .item img{
+    width: 100%;
+    height: 100%;
+}
+.carousel-caption {
+    margin-top: -25%;
+}
+.carousel-caption p {
+   text-align: justify;
+}
+.carousel-caption h1 {
+    text-align: center;
+}
+.carousel-caption small {
+    list-style-type: none;
+}
+
+
+/*
+==============================================================================
+Post, Article
+==============================================================================
+*/
+
+.post {
+    padding: 2em;
+    border-bottom: 1px solid #545454;
+}
+
+.wp-post-image {
+    width: 220px;
+    height: 220px;
+}
+
+.entry-header a {
+    display: block;
+    width: 7em;
+}
+
+.entry-header a:link, .entry-header a:visited {
+    color: #545454 !important;
+}
+
+.entry-header a:hover {
+     color: #696969 !important;
+     text-decoration: none;
+ }
+
+.entry-header a:active {
+    color: #696969 !important;
+    text-decoration: none;
+}
+
+
+.entry-header ul {
+list-style-type: none;
+}
+.home article {
+    padding: 1em;
+    max-height: 20em;
+    overflow: hidden;
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+
+}
+
+.home article:after {
+    display: block;
+    content: "";
+    clear: both;
+}
+.home article p {
+font-size: 11px;
+}
+.home article h1 {
+    font-size: 18px;
+}
+.home article h2 {
+    font-size: 16px;
+}
+.home article h3 {
+    font-size: 14px;
+}
+
+#latest-news-headline {
+    display: block;
+    margin-left: 1em;
+    font-size: 28px;
+}
+.post-categories {
+    list-style-type: none;
+}
+
+.single .post {
+    border: none;
+}
+.more:link,.more:visited  {
+    color: #cdaa54 !important;
+    text-decoration: none;
+}
+.more:hover {
+    color: #dbc285 !important;
+    text-decoration: none;
+}
+.more:active {
+    color: #dbc285 !important;
+    text-decoration: none;
+}
+
+/*
+==============================================================================
+Galery
+==============================================================================
+*/
+
+.slideshowlink {
+    margin: 1em;
+}
+
+.slideshowlink a {
+    color: white !important;
+    padding: 0.5em;
+    background-color: #95a5a6;
+    border: 1px solid transparent;
+    border-radius: 0.2em;
+    box-shadow: 3px 3px 3px silver;
+}
+
+.slideshowlink a:hover {
+    text-decoration: none;
+}
+
+.slideshowlink a:active {
+    text-decoration: none;
+    box-shadow: 1px 1px 1px silver;
+}
+
+/*
+==============================================================================
+Widgets
+==============================================================================
+*/
+
+.widget-area {
+    color: black;
+    list-style-type: none;
+    padding: 1em;
+}
+.widget-area h2 {
+
+}
+.widget-area a:link, a:visited {
+    text-decoration: none;
+    color: silver !important;
+}
+
+.widget-area a:hover {
+    text-decoration: none;
+    color: gray !important;
+}
+
+.widget-area a:active {
+    text-decoration: none;
+    color: black !important;
+}
+
+.widget ul {
+    list-style-type: none;
+}
+
+/*
+==============================================================================
+Contact form
+==============================================================================
+*/
+
+
+
+
+/*
+==============================================================================
+CSS Animations
+==============================================================================
+*/
+
+
+
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+/*
+==============================================================================
+Hidden
+==============================================================================
+*/
+
+.page-id-6 .entry-header {
+    display:none;
+}
+.page-id-8 .entry-header {
+    display:none;
+}
+.page-id-6 .entry-header {
+    display:none;
+}
+.page-id-10 .entry-header {
+    display:none;
+}
+.page-id-12 .entry-header {
+    display:none;
+}
+.page-id-32 .entry-header {
+     display:none;
+ }
+.page-id-175 .entry-header {
+    display:none;
+}
+.page-id-6 .posted {
+    display:none;
+}
+.page-id-8 .posted {
+    display:none;
+}
+.page-id-6 .posted {
+    display:none;
+}
+.page-id-10 .posted {
+    display:none;
+}
+.page-id-32 .posted {
+    display:none;
+}
+.page-id-12 .posted {
+    display:none;
+}
+.page-id-175 .posted {
+    display:none;
+}
+.comment-form-comment label {
+    display: none;
+}
